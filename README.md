@@ -1,1 +1,1 @@
-# SimpleCICD
+# QuickCI
