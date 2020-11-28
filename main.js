@@ -24,6 +24,7 @@ if(dirTest == false) {
     shell.mkdir(logs_dir)
 }
 
+
 //init express and define port
 const app = express()
 const PORT = 3000
@@ -32,10 +33,11 @@ const PORT = 3000
 app.use(bodyParser.json())
 
 //start 
-app.listen(PORT, () => console.log("Server running on port ${PORT}"))
+app.listen(PORT, () => console.log('Server running on port ' + PORT))
 app.use(bodyParser.json())
 
 app.post("main_hook", (req, res) => {
+    console.log("POST")
     res.status(200).end()
     var test = runTests()
     console.log(test)
